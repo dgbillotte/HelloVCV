@@ -1,0 +1,16 @@
+{
+  "slug": "HelloVCV",
+  "name": "HelloVCV",
+  "version": "1.0.0",
+  "license": "MIT-Modern-Variant",
+  "brand": "HelloVCV",
+  "author": "Daniel Billotte",
+  "authorEmail": "daniel@litfuze.com",
+  "authorUrl": "http://dgbillotte.com",
+  "pluginUrl": "",
+  "manualUrl": "",
+  "sourceUrl": "",
+  "donateUrl": "",
+  "changelogUrl": "",
+  "modules": []
+}
