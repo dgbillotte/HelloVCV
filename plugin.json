@@ -12,5 +12,14 @@
   "sourceUrl": "",
   "donateUrl": "",
   "changelogUrl": "",
-  "modules": []
+  "modules": [
+    {
+      "slug": "VCO",
+      "name": "VCO",
+      "description": "Simple VCO to illustrate the basics of programming VCV Rack modules",
+      "tags": [
+        "VCO"
+      ]
+    }
+  ]
 }
