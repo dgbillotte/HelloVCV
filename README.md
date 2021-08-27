@@ -180,7 +180,7 @@ The basic idea is that we need to run a cycle that is exactly the length of one 
 
 Given the sample-rate in samples/second and a target oscillator frequency in cycles/second, frequency/sample-rate gives cycles/sample. Multiplying that by 2PI produces radians/sample which is our phase increment value:
 ```c++
-    float phase_increment = (_2PI * freq) / sampleRate;
+    float phase_increment = _2PI * freq / sampleRate;
 ```
 
 From there, we add the phase_increment to the current phase. If that value is greater than 2PI, we have passed our interval and we need to wrap it back around to the beginning, which we do by subtracting 2PI from it. Since the exact end of a cycle will not likely ever be exactly on a sample boundary, we have to carry the little difference forward to the next cycle, otherwise discontinuities and aliasing will be introduced into the signal.
