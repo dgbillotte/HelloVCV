@@ -91,7 +91,7 @@ struct VCO : Module {
 	 */ 
 	void incrementPhase(float freq, float sampleRate) {
 		// calculate the phase increment
-		float phase_increment = (_2PI * freq) / sampleRate;
+		float phase_increment = _2PI * freq / sampleRate;
 
 		// push the oscillator forward one step
 		_phase += phase_increment;
