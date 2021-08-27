@@ -46,7 +46,13 @@ struct VCO : Module {
 	VCO() {
 		config(NUM_PARAMS, NUM_INPUTS, NUM_OUTPUTS, NUM_LIGHTS);
 
-		// configure the frequency knob or "param":
+		/* 
+		 * configure the frequency knob:
+		 *   min-val: 0.f
+		 *   max-val: 10000.f
+		 *   default-val: 440.f
+		 *   text-for-ui: ...
+		 */
 		configParam(FREQUENCY_PARAM, 0.f, 10000.f, 440.f, "Frequency in Hz");
 	}
 
@@ -67,12 +73,12 @@ struct VCO : Module {
 		float freq = params[FREQUENCY_PARAM].getValue();
 
 		// calculate and write the sine output 		
-		float sine_output = sin(_phase);
-		outputs[SINE_OUTPUT].setVoltage(sine_output * _gain);
+		float sine_output = _gain * sin(_phase);
+		outputs[SINE_OUTPUT].setVoltage(sine_output);
 
 		// calculate and write the square output
-		float square_output = (sine_output >= 0) ? 1.f : -1.f;
-		outputs[SQUARE_OUTPUT].setVoltage(square_output * _gain);
+		float square_output = _gain * ((sine_output >= 0) ? 1.f : -1.f);
+		outputs[SQUARE_OUTPUT].setVoltage(square_output);
 
 		// the rest of the function is to move the oscillator one step forward
 		incrementPhase(freq, args.sampleRate);
