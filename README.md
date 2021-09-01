@@ -6,7 +6,7 @@ contained in the plugin, instructions to build it, and some discussion about the
 VCV Rack SDK.
 
 ## Pre-Requsites
-See my [article](http://dgbillotte.com/2021/08/29/Audio-Programming-with-C-and-VCV-Rack/) for a quick run through of how to:
+See my [article](http://dgbillotte.com/2021/08/28/Audio-Programming-with-C-and-VCV-Rack/) for a quick run through of how to:
 - Install VCV Rack
 - Setup and test your build environment
 
