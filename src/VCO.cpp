@@ -57,7 +57,7 @@ struct VCO : Module {
 	}
 
 	/*
-	 * process() gets called once for every sample period (44,100 times/sec
+	 * process() gets called once for every sample (44,100 times/sec
 	 * or better) and is where your plugin does all of its audio processing
 	 * or generation sorcery.
 	 * 
