@@ -32,7 +32,7 @@ struct VCO : Module {
 	 * These are member variables specific to this module
 	 * _phase: keeps track of where the oscillator is at in its cycle
 	 * _gain: how much to amplify the [-1..1] output of our oscillator
-	 * _2PI: because process() uses it 3x per call
+	 * _2PI: because it is nicer to write
 	 */
 	float _phase = 0.f;
 	float _gain = 5.f; // this results in a signal in [-5V..5V]
